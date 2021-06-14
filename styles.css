@@ -1,6 +1,410 @@
+/*
+colors:
+5a5353 dark liver
+e2d686 flax
+cc8899 puce
+1d726f skobeloff
+*/
+
+* {
+	text-align: center;
+}
+
+html {
+	background: linear-gradient(#e3eae7, #ef8732);
+	width: 100%;
+}
+
+body {
+	margin: 0 auto;
+}
+
 main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
+a:link {
+	color: #11502a;
+}
+
+a:visited {
+	color: #551a8b;
+}
+
+a:hover {
+	color: #8b3238;
+}
+
+
+h2 {
+	font-family: 'Playfair Display';
+	font-size: 64px;
+	border-bottom: 3px solid black;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	padding: 10px 10px 10px 10px;
+	transition: border-bottom 0.5s, color 0.5s;
+	cursor: pointer;
+}
+
+h2:hover {
+	color: white;
+	border-bottom: 3px solid white;
+	transition: border-bottom 0.5s, color 0.5s;
+	cursor: pointer;
+}
+
+h3 {
+	font-size: 28px;
+	font-family: 'Khula';
+	font-weight: 300;
+}
+
+rect {
+	fill: red;
+}
+
+nav {
+	width: 100%;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding-left: 0;
+}
+
+nav ul li {
+	transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+	transform: translateY(10px);
+}
+
+ul {
+	padding-left: 0;
+}
+
+ul li, #where-to-stay a {
+	max-width: 500px;
+	margin: 0 auto;
+	list-style-type: none;
+	line-height: 2.2rem;
+	font-size: 20px;
+	font-family: 'Khula';
+	font-weight: 300;
+}
+
+#where-to-stay ul {
+	margin-bottom: 0;
+}
+
+nav ul li img {
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+section {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 97%;
+	display: none;
+}
+
+p {
+	max-width: 520px;
+	margin: 0 auto;
+	line-height: 2rem;
+	font-size: 20px;
+	font-family: 'Khula';
+	font-weight: 300;
+}
+
+article p {
+	max-width: 640px;
+}
+
+#masthead {
+	font-family: 'Great Vibes', cursive;
+	padding-top: 15px;
+	overflow: hidden;
+	width: 98%;
+	display: block;
+}
+
+
+#masthead > h1 {
+	position: absolute;
+	font-size: 82px;
+	color: white;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#masthead > div {
+	width: 100%;
+}
+
+.video-hero {
+	opacity: 1;
+	width: 96%;
+}
+
+
+#bride-and-groom h3 {
+	color: #8b3238;
+}
+
+#bride-and-groom img {
+	margin: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#bride-and-groom {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+/*	grid-template-columns: 300px auto 300px;
+	justify-items: center;
+	align-items: center;
+	grid-template-rows: repeat(4, auto);	
+	grid-gap: 2rem 1rem;
+*/
+}
+
+.bg-pics {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#ecs {
+	width: 240px;
+	height:246px;
+}
+
+#sgs {
+	width: 200px;
+	height: 255px;
+}
+
+#sws {
+	width: 200px;
+	height: 300px;
+}
+
+#nts {
+	width: 220px;
+	height:293px;
+}
+
+#iltb-small {
+	display: none;
+}
+
+@media screen and (max-width: 799px) {
+	#bride-and-groom{
+		grid-template-columns: 1fr;
+	}
+
+	#bride-and-groom img {
+		margin: 0 auto;
+	}
+
+	#wedding-deets iframe {
+		width: 100%;
+	}
+
+	a:link {
+	color: #ec916d;
+	}
+
+	a:visited {
+		color: #551a8b;
+	}
+
+	a:hover {
+		color: #88ccbb;
+	}
+
+	#iltb-big {
+		display: none;
+	}
+
+	#iltb-small {
+		display: block;
+	}
+}
+
+#wedding-party, #things-to-do {
+	display: none;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: start;
+}
+
+.person {
+	display: none;
+}
+
+.person img {
+	margin: 1em;
+	box-shadow: 0px 0px 0px 3px #ef8732;
+    transition: box-shadow 0.2s linear;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+#things-to-do .person {
+	display: block;
+}
+
+#things-to-do .person img {
+	border-radius: 12px;
+}
+
+#mim {
+	width: 300px;
+}
+
+
+#iltb-big {
+	width: 700px;
+}
+
+#sd {
+	width: 350px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+label > h3 {
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.person img:hover {
+	box-shadow: 0px 0px 0px 6px #e3eae7;  
+}
+
+button {
+	cursor: pointer;
+	margin: 0 auto;
+	max-width: 150px;
+	border-radius: 12px;
+	background-color: #88ccbb;
+	padding: 5px 10px;
+	text-align: center;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #ec916d;
+}
+
+.toggle{
+	display: none;
+}
+
+label {
+	max-width: 375px;
+}
+
+.toggle + label {
+	display: block;
+}
+
+
+.toggle + label + p {
+	display: none;
+}
+
+
+.toggle:checked + label + p {
+	display: block;
+}
+
+
+.containerTab {
+	display: none;
+	flex-direction: column;
+	max-width: 375px;
+}
+
+.containerTab p {
+	font-size: 16px;
+	line-height: 1.5rem;
+}
+
+
+#where-to-stay, #getting-around, #wedding-deets,  #registry {
+	display: none;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+@media screen and (max-width: 799px) {
+	#where-to-stay, #getting-around, #wedding-deets, #registry {
+		flex-direction: column;
+	}	
+}
+
+#registry {
+	flex-direction: column !important; 
+	justify-content: center;
+	align-items: center;
+}
+
+#reg-gift {
+	margin-bottom: 60px;
+}
+
+#reg-money {
+	display: flex;
+	flex-direction: row !important; 
+	justify-content: center;
+	align-items: center;
+}
+
+#ca {
+	transform: scale(1.2);
+}
+
+#registry div, #registry div svg {
+	width: 100px;
+	height: 100px;
+}
+
+#registry a {
+	font-size: 20px;
+}
+
+.tiny {
+	font-size: 5px;
+}
+

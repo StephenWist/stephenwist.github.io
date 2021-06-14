@@ -3,20 +3,362 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='noindex'>
     <title>The Wist Wedding</title>
-    <link rel='stylesheet' href='https://thewist.wedding/styles.css'>
-    <script src='https://thewist.wedding/main.js' defer></script>
+    <link rel='stylesheet' href='styles.css'>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="path/to/jquery.background-video.js"></script>
+    <!--
+     <link rel='stylesheet' href='nav_styles.css'>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='main.js' defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
+	<link href="https://fonts.googleapis.com/css2?family=Khula&display=swap" rel="stylesheet"> 
+	<link href='https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' rel='stylesheet'>
 </head>
 <body>
 	<main>
-		<h1>Under Construction</h1>
-		<p>Please enter your email below to get notified when this site is complete :) - Stephen</p>
+		
+		<nav>
+			<ul>
+				<li ><a  onclick="openTab('bride-and-groom',this)" href='#bride-and-groom'><img src='img/S&E(2).svg' height=100px></a></li>
+				<li><a onclick="openTab('wedding-party',this)"href='#wedding-party'><img src='img/confetti.png' height=60px></a></li>
+				<li><a onclick="openTab('wedding-deets',this)" href='#wedding-deets'><img src='img/list.png' height=60px></a></li>
+				<li><a onclick="openTab('registry',this)" href='#registry'><img src='img/dollar.png' height=60px></a></li>
+			</ul>
+		</nav>
+		
+		<section id='masthead'>
+			
+			<img src='img/horse.jpg' width='100%'>
+			
+			<!--<h1>Stephen & Erica</h1>-->
+			<!--div class="video-hero jquery-background-video-wrapper demo-video-wrapper">
+				<video class="jquery-background-video" autoplay muted loop poster="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.jpg">
+			    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.mp4" type="video/mp4">
+			    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.webm" type="video/webm">
+			    <source src="https://d2ezlykacdqcnj.cloudfront.net/_assets/home-video/beach-waves-loop.ogv" type="video/ogg">
+			  </video>
+			</div-->
+		</section>
 
-		<form id='frm' action='#' method='post'>
-			<label for='email_input'>Email:</label>
-			<input type='email' id='email_input' name='email_input' required>
-			<input type='button' onclick='submitEmail()'>
-		</form>
+		<h2 onclick="openTab('bride-and-groom',this)">The Bride and Groom</h2>
+		<section data-oc='closed' id='bride-and-groom'>
+			<article>
+				<div class='bg-pics'>
+					<img id='ecs'  src='img/erica_class_small.jpg'>
+					<img id='sgs'  src='img/stephen_gang_small.jpg'>
+				</div>
+				<h3>Paths Collide</h3>
+				<p>We first met way back in the 7th grade. While we had a few classes together and hung out with eachother and some of the same people, we were still very young and naive trying our best to navigate the awkwardness of middle school.</p>
+				
+			</article>
+
+			<article>
+				<div class='bg-pics'>
+					<img width=300px height=359px src='img/erica_grad.jpg'>
+					<img width=300px height=300px src='img/stephen_grad.jpg'>
+				</div>
+					<h3>Paths Stray</h3>
+					<p>Before we came together we drifted apart. Erica attended Sherwood Highschool and Stephen, Dematha Catholic, though we bumped into one another through mutual friends. College saw us farther still. Erica found herself deep in the Appalachian Mountains, earning a B.S. in Sociology from Radford University. Meanwhile, Stephen stayed close to home at UMBC earning himself a B.S. in Biochemistry & Molecular Biology. After our college adventures, Erica came back home and Stephen went away. He went down to Atlanta to earn his M.S. in Bioinformatics and she was working on Captiol Hill, rubbing shoulders with the political elite.</p>
+			</article>
+
+			<article>
+				<div class='bg-pics'>
+					<img id='sws'  src='img/sweet_embrace_small.jpg'>					
+					<img id='nts'  src='img/naptown_small.jpg'>
+				</div>
+				<h3>Paths Entwined</h3>
+				<p>Unknown to us, we were both working in the DMV and even lived just a couple miles away from our future spouse. One day after work, we we decompressing in our respective apartments idly swiping through Tinder (don't say it's good for nothing!) when, "Hey...I know them!" we saw each other on the app. A few messages later and we set up a date (even though Erica wasn't sure it was at first)! Over the next few days and weeks it became obvious, this person is special. And the rest, is history :-)</p>
+				
+			</article>
+
+
+			<article>
+				<div class='bg-pics'>
+					<img  src='img/wedding_1_small.jpg'>
+				</div>
+				<h3>Wedding #1</h3>
+				<p>We moved in together into an apartment in Reston so Stephen could be closer to his job. Hardly a month after we moved in, COVID hit and no one could go into the office anymore. Being stuck together helped us grow closer even faster than we already were. We tied the knot during COVID in the backyard of a very kind notary and had a small celebration dinner with a couple close family members.</p>
+				
+			</article>
+		</section>
+
+		<h2 onclick="openTab('wedding-party',this)">Meet the Wedding Party</h2>
+		<section data-oc='closed' id='wedding-party'>
+			<div  class='person'>
+				<input class='toggle' id='tog1' type='checkbox'>
+				<label onclick="openTab('b1', this);" for='tog1'>
+					
+					<img width=200 height=266 src='img/joey.jpg'>
+					<h3>Joey</h3>
+				</label>
+								
+				<div  id='b1'  class='containerTab'>
+					
+	  				<p>Friends since diapers.</p>
+
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog6' type='checkbox'>
+				<label onclick="openTab('b6',this);" for='tog6'>
+					
+					<img width=200 height=266  src='img/kateri.jpg'>
+					<h3>Kateri</h3>
+				</label>
+
+				<div id='b6'  class='containerTab'>
+	  				<p>College roomates.</p>
+
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog2' type='checkbox'>
+				<label onclick="openTab('b2',this);" for='tog2'>
+					
+					<img width=200 height=266  src='img/chris.jpg'>
+					<h3>Chris</h3>
+				</label>
+									
+				<div id='b2'  class='containerTab'>
+	  				<p>A hometown homeboy.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog3' type='checkbox'>
+				<label for='tog3' onclick="openTab('b3',this);">
+					
+					<img width=200 height=266  src='img/christina.jpg'>
+					<h3>Christina</h3>
+				</label>
+									
+				<div id='b3'  class='containerTab'>
+					<p>Stephen's (little) big sister.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog4' type='checkbox'>
+				<label for='tog4' onclick="openTab('b4',this);">
+					
+					<img width=200 height=266  src='img/zig.jpg'>
+					<h3>Zig</h3>
+				</label>
+									
+				<div id='b4'  class='containerTab'>
+	  				<p>Undergraduate research partners.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog5' type='checkbox'>
+				<label for='tog5' onclick="openTab('b5',this);">
+					
+					<img width=200 height=266  src='img/alin.png'>
+					<h3>Amanda</h3>
+				</label>
+									
+				<div id='b5'  class='containerTab'>
+	  				<p>Childhood best friend.</p>
+				</div>
+			</div>
+			<div  class='person'>
+				<input class='toggle' id='tog7' type='checkbox'>
+				<label onclick="openTab('b7', this);" for='tog7'>
+					
+					<img width=200 height=266  src='img/james.jpg'>
+					<h3>James</h3>
+				</label>
+								
+				<div id='b7'  class='containerTab'>
+					
+	  				<p>Brother in law to be.</p>
+
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog8' type='checkbox'>
+				<label onclick="openTab('b8',this);" for='tog8'>
+					
+					<img width=200 height=266  src='img/jaz.jpg'>
+					<h3>Jasmine</h3>
+				</label>
+
+				<div id='b8'  class='containerTab'>
+
+	  				<p>Step sister.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog11' type='checkbox'>
+				<label for='tog11' onclick="openTab('b11',this);">
+					
+					<img width=200 height=266  src='img/gabbi.jpg'>
+					<h3>Gabbi</h3>
+				</label>
+									
+				<div id='b11'  class='containerTab'>
+	  				<p>Friend from college.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog9' type='checkbox'>
+				<label onclick="openTab('b9',this);" for='tog9'>
+					
+					<img width=200 height=266  src='img/just_babb.jpg'>
+					<h3>Aaron</h3>
+				</label>
+									
+				<div id='b9'  class='containerTab'>
+
+	  				<p>College roommate.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog10' type='checkbox'>
+				<label for='tog10' onclick="openTab('b10',this);">
+					
+					<img width=200 height=266  src='img/coco.jpg'>
+					<h3>Courtney</h3>
+				</label>
+									
+				<div id='b10'  class='containerTab'>
+	  				<p>Childhood best friend.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog12' type='checkbox'>
+				<label for='tog12' onclick="openTab('b12',this);">
+					
+					<img width=200 height=266  src='img/juwan.jpg'>
+					<h3>Juwan</h3>
+				</label>
+									
+				<div id='b12'  class='containerTab'>
+	  				<p>Step brother.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog13' type='checkbox'>
+				<label for='tog13' onclick="openTab('b13',this);">
+					
+					<img width=200 height=266  src='img/nicole.jpg'>
+					<h3>Nicole</h3>
+				</label>
+									
+				<div id='b13'  class='containerTab'>
+	  				<p>Childhood best friend.</p>
+				</div>
+			</div>
+			<div class='person'>
+				<input class='toggle' id='tog14' type='checkbox'>
+				<label for='tog14' onclick="openTab('b14',this);">
+					
+					<img width=200 height=266  src='img/josh.jpg'>
+					<h3>Josh</h3>
+				</label>
+									
+				<div id='b14'  class='containerTab'>
+	  				<p>College friend.</p>
+				</div>
+			</div>
+		</section>
+
+		<h2 onclick="openTab('wedding-deets', this)">Wedding Details (Coming Soon)</h2>
+		<section data-oc='closed' id='wedding-deets'>
+			<article>
+				<h3>Ceremony at <em>Passe-a-Grille Beach</em></h3>
+				<iframe
+				width="600"
+  			    height="450"
+			    style="border:0"
+			    loading="lazy"
+			    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSBvY31OVqbZorItjq0idzXRT1i7jSQ08&q=Passe+a+Grille+Beach,Tampa+Florida"
+				></iframe>
+				<h3>Reception at <em>The Zamora Rooftop</em></h3>
+				<iframe
+				width="600"
+  			    height="450"
+			    style="border:0"
+			    loading="lazy"
+			    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDSBvY31OVqbZorItjq0idzXRT1i7jSQ08&q=Hotel+Zamora,Tampa+Florida"
+				></iframe>
+			</article>
+		</section>
+
+		<h2 onclick="openTab('where-to-stay',this)">Where to Stay</h2>
+		<section data-oc='closed' id='where-to-stay'>
+			<article>
+				<p>We would love for <em>all</em> of our guests to stay at the <a href='thehotelzamora.com'>Hotel Zamora</a>. We have secured special rates ($199) for our guests and know they will treat you like the royalty you are. However, we understand if you don't want to or cannot stay there. Here are some alternatives to check out:</p>
+				<ul>
+					<li><a href='https://www.hotels.com/ho1130657216/?q-check-out=2021-10-04&FPQ=2&q-check-in=2021-10-01&WOE=1&WOD=5&q-room-0-children=0&tab=description&JHR=3&q-room-0-adults=1&YGF=14&MGT=3&ZSX=0&SYE=3'>Condo on the water</a></li>
+					<li><a href='https://www.hotels.com/ho1285242496/?q-check-out=2021-10-04&FPQ=2&q-check-in=2021-10-01&WOE=1&WOD=5&q-room-0-children=0&tab=description&JHR=3&q-room-0-adults=1&YGF=14&MGT=3&ZSX=0&SYE=3'>Another condo on the water</a></li>
+					<li><a href='https://www.hotels.com/ho1419254816/?q-check-out=2021-10-04&FPQ=2&q-check-in=2021-10-01&WOE=1&WOD=5&q-room-0-children=0&tab=description&JHR=3&q-room-0-adults=1&YGF=14&MGT=3&ZSX=0&SYE=3'>This cute apartment</a></li>
+					<li><a href='https://www.hotels.com/ho2040749824/?q-check-out=2021-10-04&FPQ=2&q-check-in=2021-10-01&WOE=1&WOD=5&q-room-0-children=0&tab=description&JHR=3&q-room-0-adults=1&YGF=14&MGT=3&ZSX=0&SYE=3'>Hey it's got a kitchen!</a></li>
+				</ul>
+				<a href='https://www.google.com/search?q=hotels+in+pass+a+grille+florida&source=hp&ei=u8fDYIDYDpqi5NoPy56N6AI&iflsig=AINFCbYAAAAAYMPVywWQ7N6UxKolMR3Xiiy4_wjqNk6s&oq=hotels+in+passe+a+gri&gs_lcp=Cgdnd3Mtd2l6EAMYADIGCAAQFhAeOg4ILhCxAxDHARCjAhCTAjoICAAQsQMQgwE6BQgAELEDOggILhDHARCjAjoLCC4QsQMQxwEQowI6AggAOgIILjoICAAQsQMQyQM6BQgAEJIDOgUILhCxAzoECAAQCjoICAAQFhAKEB46CAghEBYQHRAeOgUIIRCrAlC2CFjXQWDWTGgDcAB4AIABxAGIAa8PkgEEMTcuNZgBAKABAaoBB2d3cy13aXo&sclient=gws-wiz'>More hotels near Passe-a-Grille beach.</a>
+			</article>
+		</section>
+
+		<h2 onclick="openTab('things-to-do',this)">Things to Do</h2>
+		<section data-oc='closed' id='things-to-do'>
+			<div class='person'>
+				<a href='https://www.pinellascounty.org/park/05_ft_desoto.htm'><img src='img/fort_de_soto.jpg'></a>
+			</div>
+			<div class='person'>
+				<a href='https://redmesamercado.com/'><img src='img/rmm.jpg'></a>
+			</div>
+			<div class='person'>
+				<a href='https://saturdaymorningmarket.com/'><img src='img/smm.png'></a>
+			</div>
+			<div class='person'>
+				<a href='https://www.facebook.com/Somethin-Different-104963179546988/'><img id='sd' src='img/sd.jpg'></a>
+			</div>
+			<div class='person'>
+				<a href='https://www.facebook.com/thebluegoosebar'><img src='img/tbg.jpg'></a>
+			</div>
+			<div class='person'>
+				<a href='https://www.mazzarosmarket.com/'><img id='mim' src='img/mim.png'></a>
+			</div>
+			<div class='person'>
+				<a href='https://ilovetheburg.com/'><img id='iltb-big' src='img/iltb.png'></a>
+				<a href='https://ilovetheburg.com/'><img id='iltb-small' src='img/iltb_small.png'></a>
+			</div>
+				<!--ul>
+					<li>There is great hiking, kayaking, and beach bumming to do at </li>
+					<li>Take a stroll on the bay at <a href='http://www.stpeteparksrec.org/vinoypark/'>Vinoy Park.</a></li>
+					<li>Get some DANK burritos and asada fries at <a href='https://redmesamercado.com/'>Red Mesa Mercado.</a></li>
+					<li>Pick up some super fresh fruit and veggies from our local <a href='https://saturdaymorningmarket.com/'>Farmer's Market.</a></li>
+					<li>Tryna get litty? Can't go wrong with hitting up Central Ave and stopping at a places, like <a href='http://www.enigmastpete.com/'>Enigma, </a><a href='https://www.facebook.com/Somethin-Different-104963179546988/'>Somethin' Different, </a>and <a href='https://www.jannuslive.com/pelican-pub/'>The Pelican.</a></li>
+					<li>Still wanna go out but feeling something low key? We got you. <a href='https://www.fergssportsbar.com/'>Ferg's, </a><a href='https://www.facebook.com/thebluegoosebar'>The Blue Goose, </a> or one of the bajillion <a href='https://www.google.com/maps/search/Brewery/@27.767146,-82.6624548,14.13z/data=!4m2!2m1!6e5'>Breweries</a> in town.</li>
+					<li>Take a mini-vaycay to the best Italian market West of Turin at <a href='https://www.mazzarosmarket.com/'>Mazzaro's.</a></li>
+					<li>For more suggestions, check out this local run website for more: <a href='https://ilovetheburg.com/'> ilovetheburg.com</a></li>
+				</ul -->
+			
+		</section>
+
+		<h2 onclick="openTab('registry',this)">Registry</h2>
+		<section data-oc='closed' id='registry'>
+			<div id='reg-gift'>
+				<a href='https://www.myregistry.com/wedding-registry/stephen-wist-st-petersburg-fl/2881821'><img width=100px height=100px src='img/gift-box.png'></a>
+			</div>
+			<div id='reg-money'>
+				<div>
+					<svg >
+					<a href='https://account.venmo.com/u/Stephen-Wist' ><image  x=10px href='img/venmo-icon.svg' width=50px height=50px preserveAspectRatio="xMidYMid meet" /></a>
+					</svg>
+				</div>
+				<div>
+					<svg >
+					<a href='https://cash.app/$theRealWist' width=100px height=100px><image id='ca' x=-40% y=-55%  href='img/Cash App - Dollar - Icon.svg'  preserveAspectRatio="xMidYMid meet"/></a>
+					</svg>
+				</div>
+				<div>
+					<a href='paypal.me/StephenWist'><img  width=60px height=60px src='img/paypal.png'/></a>
+				</div>
+			</div>
+		</section>
 	</main>
 </body>	
 </html>
