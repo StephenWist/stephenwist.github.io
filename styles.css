@@ -40,14 +40,18 @@ a:hover {
 
 
 h2 {
-	font-family: 'Playfair Display';
+	font-family: 'Quicksand';
 	font-size: 64px;
+	font-weight: 300;
 	border-bottom: 3px solid black;
+	margin-bottom: 40px;
+	/*
 	text-shadow:
 		-1px -1px 0 #000,
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+	*/
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	padding: 10px 10px 10px 10px;
@@ -56,15 +60,15 @@ h2 {
 }
 
 h2:hover {
-	color: white;
-	border-bottom: 3px solid white;
+	color: #e3eae7;
+	border-bottom: 3px solid #e3eae7;
 	transition: border-bottom 0.5s, color 0.5s;
 	cursor: pointer;
 }
 
 h3 {
 	font-size: 28px;
-	font-family: 'Khula';
+	font-family: 'Quicksand';
 	font-weight: 300;
 }
 
@@ -102,7 +106,7 @@ ul li, #where-to-stay a {
 	list-style-type: none;
 	line-height: 2.2rem;
 	font-size: 20px;
-	font-family: 'Khula';
+	font-family: 'Noto Serif JP';
 	font-weight: 300;
 }
 
@@ -128,12 +132,15 @@ p {
 	margin: 0 auto;
 	line-height: 2rem;
 	font-size: 20px;
-	font-family: 'Khula';
+	font-family: 'Noto Serif JP';
 	font-weight: 300;
 }
 
 article p {
-	max-width: 640px;
+	text-align: left;
+	max-width: 760px;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
 }
 
 #masthead {
@@ -169,7 +176,7 @@ article p {
 }
 
 
-#bride-and-groom h3 {
+#bride-and-groom h3, #wedding-deets h3 {
 	color: #8b3238;
 }
 
