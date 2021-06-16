@@ -356,17 +356,29 @@ label {
 	align-items: center;
 }
 
-#ca {
-	transform: scale(1.2);
-}
 
 #registry div, #registry div svg {
-	width: 100px;
+	width: 60px;
 	height: 100px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#registry div svg {
+	margin:0 auto;
+}
+
+#reg-gift {
+	width: 120px !important;
 }
 
 #registry a {
 	font-size: 20px;
+}
+
+#registry img {
+	border-radius: 8px;
+	margin-right: 40px;
 }
 
 .tiny {
@@ -409,8 +421,7 @@ label {
 	}
 
 	#ca-a, #ca {
-		width: 55px;
-		height: 55px;
+		
 	}
 
 
