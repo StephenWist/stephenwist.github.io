@@ -207,15 +207,6 @@ article p {
 	align-items: center;
 }
 
-#ecs {
-	width: 240px;
-	height:246px;
-}
-
-#sgs {
-	width: 200px;
-	height: 255px;
-}
 
 #sws {
 	width: 200px;
@@ -231,39 +222,6 @@ article p {
 	display: none;
 }
 
-@media screen and (max-width: 799px) {
-	#bride-and-groom{
-		grid-template-columns: 1fr;
-	}
-
-	#bride-and-groom img {
-		margin: 0 auto;
-	}
-
-	#wedding-deets iframe {
-		width: 100%;
-	}
-
-	a:link {
-	color: #ec916d;
-	}
-
-	a:visited {
-		color: #551a8b;
-	}
-
-	a:hover {
-		color: #88ccbb;
-	}
-
-	#iltb-big {
-		display: none;
-	}
-
-	#iltb-small {
-		display: block;
-	}
-}
 
 #wedding-party, #things-to-do {
 	display: none;
@@ -415,3 +373,38 @@ label {
 	font-size: 5px;
 }
 
+
+@media screen and (max-width: 767px) {
+
+	p, article p, #bride-and-groom h3, article {
+		max-width: 350px !important;
+	}
+
+	#bride-and-groom img {
+		margin: 0 auto;
+	}
+
+	#wedding-deets iframe {
+		width: 100%;
+	}
+
+	a:link {
+	color: #ec916d;
+	}
+
+	a:visited {
+		color: #551a8b;
+	}
+
+	a:hover {
+		color: #88ccbb;
+	}
+
+	#iltb-big {
+		display: none;
+	}
+
+	#iltb-small {
+		display: block;
+	}
+}
