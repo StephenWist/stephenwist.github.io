@@ -407,4 +407,11 @@ label {
 	#iltb-small {
 		display: block;
 	}
+
+	#ca-a, #ca {
+		width: 55px;
+		height: 55px;
+	}
+
+
 }
