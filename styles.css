@@ -390,6 +390,7 @@ label {
 
 	p, article p, #bride-and-groom h3, article {
 		max-width: 350px !important;
+		text-align: center;
 	}
 
 	#bride-and-groom img {
