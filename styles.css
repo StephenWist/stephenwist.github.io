@@ -401,17 +401,7 @@ label {
 		width: 100%;
 	}
 
-	a:link {
-	color: #ec916d;
-	}
-
-	a:visited {
-		color: #551a8b;
-	}
-
-	a:hover {
-		color: #88ccbb;
-	}
+	
 
 	#iltb-big {
 		display: none;
